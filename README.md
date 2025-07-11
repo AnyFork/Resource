@@ -2,13 +2,13 @@
 
 > 本仓库资源仅供个人学习使用，禁止非法商用和恶意传播。
 
-提供静态资源文件仓库，使用`jsdelivr`的 CDN 进行加速访问,国内访问地址用`https://cdn.jsdelivr.net`。根据不同目录进行路径拼接即可，比如：`https://cdn.jsdelivr.net/gh/AnyFork/resource/images/20250707210920186.png`.
+提供静态资源文件仓库，使用`jsdelivr`的 CDN 进行加速访问,国内访问地址用`https://cdn.jsdelivr.net`。
 
 ## 图片目录
 
 1、图片目录为`images`，采用`PicList`第三方客户端进行本地上传，客户端支持远程删除图片，图片类型转换，图片压缩。
 
-2、可作为图床使用，访问地址：`https://cdn.jsdelivr.net/gh/AnyFork/resource/images/20250707210920186.png`,只需要修改对应的文件名称。
+2、可作为图床使用。
 
 ## JS 目录
 
