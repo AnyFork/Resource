@@ -1,12 +1,14 @@
 # 静态资源仓库
 
-提供静态资源文件仓库，使用`jsdelivr`的 CDN 进行加速访问,国内访问地址用`https://cdn.jsdelivr.net`。根据不同目录进行路径拼接，比如：`https://cdn.jsdelivr.net/gh/AnyFork/resource/image/20250707210920186.png`.
+> 本仓库资源仅供个人学习使用，禁止非法商用和恶意传播。
+
+提供静态资源文件仓库，使用`jsdelivr`的 CDN 进行加速访问,国内访问地址用`https://cdn.jsdelivr.net`。根据不同目录进行路径拼接即可，比如：`https://cdn.jsdelivr.net/gh/AnyFork/resource/images/20250707210920186.png`.
 
 ## 图片目录
 
 1、图片目录为`images`，采用`PicList`第三方客户端进行本地上传，客户端支持远程删除图片，图片类型转换，图片压缩。
 
-2、可作为图床使用，访问地址：`https://cdn.jsdelivr.net/gh/AnyFork/resource/image/20250707210920186.png`,只需要修改对应的文件名称。
+2、可作为图床使用，访问地址：`https://cdn.jsdelivr.net/gh/AnyFork/resource/images/20250707210920186.png`,只需要修改对应的文件名称。
 
 ## JS 目录
 
@@ -24,15 +26,15 @@
 
 1、收录常用中文字体源文件，可以直接完整引入，字体文件较大。
 
-2、对收录的源文件进行中文分片处理，借助`font-slice`组件，将中文进行分片为很小的文件，然后根据页面实际字体，按需加载。
+2、对收录的源文件进行中文分片处理，借助[`cn-font-split`](https://github.com/KonghaYao/cn-font-split)组件，将中文进行分片为很小的文件，然后根据页面实际字体，按需加载。
 
 3、源文件在`fonts/original`目录下，对应的分片文件在`fonts/division`目录下。
 
-4、根据源目录下面`.ttf`文件进行分片，分片后的小字体文件格式为`.woff2`
+4、字体文件分片后，每一个目录下都有一个与`目录同名的css`文件，可单独引入使用。
 
 ### 1. PingFangSC 多版本字体
 
-提供了`PingFangSC` 字体的多版本下载，包括 eot、woff2、woff 和 ttf 格式。这些字体文件涵盖了六个不同的字重，适用于不同的设计需求。
+提供了`PingFang` 字体的多版本下载，包括 港体、澳体、繁体中文和简体中文，并且涵盖了不同版本的字体(感谢[`ACT-02`]('https://github.com/ACT-02')提供的数据源)。这些字体文件涵盖了六个不同的字重，适用于不同的设计需求。
 
 #### 1. 字体版本及字重
 
@@ -46,49 +48,12 @@
 
 - **苹方-简 中粗体**: PingFangSC-Semibold
 
-- **苹方-简 粗体**: PingFangSC-Bold
+- **苹方-简 纤细体**: PingFangSC-Thin
 
-#### 2. 使用方法
+#### 2. 分片文件
 
-1. 下载所需的字体文件。
-2. 在您的项目中引用相应的字体文件。
-3. 根据需要设置 `font-family`，例如：
-   ```css
-   body {
-     font-family: PingFangSC-Regular, sans-serif;
-   }
-   ```
+借助[`cn-font-split`](https://github.com/KonghaYao/cn-font-split)组件，对`PingFang`字体进行了分片，分片目录：`fonts/division/PingFangSC`, 可直接引入对于目录下面的样式文件。
 
-## 文件列表
+### 2. 鸿蒙字体
 
-- `PingFangSC-Regular.eot`
-- `PingFangSC-Regular.woff2`
-- `PingFangSC-Regular.woff`
-- `PingFangSC-Regular.ttf`
-- `PingFangSC-Light.eot`
-- `PingFangSC-Light.woff2`
-- `PingFangSC-Light.woff`
-- `PingFangSC-Light.ttf`
-- `PingFangSC-Medium.eot`
-- `PingFangSC-Medium.woff2`
-- `PingFangSC-Medium.woff`
-- `PingFangSC-Medium.ttf`
-- `PingFangSC-Ultralight.eot`
-- `PingFangSC-Ultralight.woff2`
-- `PingFangSC-Ultralight.woff`
-- `PingFangSC-Ultralight.ttf`
-- `PingFangSC-Semibold.eot`
-- `PingFangSC-Semibold.woff2`
-- `PingFangSC-Semibold.woff`
-- `PingFangSC-Semibold.ttf`
-- `PingFangSC-Bold.eot`
-- `PingFangSC-Bold.woff2`
-- `PingFangSC-Bold.woff`
-- `PingFangSC-Bold.ttf`
-
-## 注意事项
-
-- 请确保在合法范围内使用这些字体文件。
-- 如果您在项目中使用这些字体，请遵循相关的许可协议。
-
-希望这些字体文件能够帮助您更好地完成设计工作！
+分片目录：`fonts/division/HarmonyOS`, 可直接引入对于目录下面的样式文件。
