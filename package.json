@@ -1,0 +1,14 @@
+{
+  "name": "Resource",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "静态文件资源库",
+  "scripts": {
+    "HM": "node script/harmonyos.js",
+    "PF": "node script/pingfangsc.js"
+  },
+  "author": "anyfork@gmail.com",
+  "dependencies": {
+    "cn-font-split": "^7.2.9"
+  }
+}
