@@ -5,8 +5,8 @@ import { fontSplit } from 'cn-font-split';
 import { traverseDirectory } from '../utils/index.js'
 const __filename = fileURLToPath(import.meta.url);
 //将original下面的AlimamaFangYuanTiVF目录下面的简体中文进行分片
-const original = path.resolve(__filename, "../../fonts/original/AlimamaFangYuanTiVF")
-const division = path.resolve(__filename, "../../fonts/division/AlimamaFangYuanTiVF")
+const original = path.resolve(__filename, "../../public/fonts/original/AlimamaFangYuanTiVF")
+const division = path.resolve(__filename, "../../public/fonts/division/AlimamaFangYuanTiVF")
 traverseDirectory(original, async (filePath) => {
     const inputBuffer = new Uint8Array(
         fs.readFileSync(filePath).buffer,
